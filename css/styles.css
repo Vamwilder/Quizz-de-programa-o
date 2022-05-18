@@ -1,0 +1,159 @@
+/* Geral */
+* {
+    margin: 0%;                                     /* Tirando a margem das tags */
+    padding: 0%;                                    /* Espaçamento interno dos cantos */
+    box-sizing: border-box;                         /* Tirando o tamanho Extra dos Inputs */                 
+    font-family: Arial, Helvetica, sans-serif;      /* Alterando a fonte do projeto */
+}
+
+body {
+    background-color: #242940;                      /* Cor de fundo do corpo */
+    color: #fff;                                    /* cor das letras */
+}
+
+.hide {
+    display: none !important;                       /* Importante, vai subscrever qualquer regra do código */
+}
+
+#main-title {
+    padding: 40px 0;                                /* distanciamento de 40px no eixo y e 0 no eixo x */
+    text-align: center;                             /* ALinhando texto ao centro */
+    background-color: #2d425a;                      /* Cor de fundo do titulo principal */
+    border-bottom-right-radius: 50px;               /* Radio da borda inferior direita tem 50px */
+    border-bottom-left-radius: 50px;               /* Radio da borda inferior esquerda tem 50px */
+}
+
+#score-container {
+    background-color: #cddde8;                  /* Cor de fundo */
+    color: #000;                                /* Cor das letras */
+    text-align: center;                             /* ALinha texto ao centro */
+    width: 300px;                                   /* Largura de 300px */
+    margin: 50px auto;                              /* coloca pargem de 50pxe restante auto, para centralizar o texto */
+    padding: 25px;                                  /* Espaçamento interno */
+    border-radius: 20px;                            /* Raio da borda */
+}
+
+#score-container p {                                /* Paragrafos internos */
+    font-size: 14px;                                /* Tamanho da fonte */
+    margin: 20px 0;                                 /* Margem com 20px no eixo y */
+}
+
+#score-container #display-score {                   /* Porcentagem de acerto */
+    font-size: 32px;                                /* Tamanho da fonte */
+    font-weight: bold;                              /* Negrito */
+}
+
+#correct-answers {                                  /* Numero de respostas certas */
+    font-weight: bold;                              /* Negrito */
+    color: #40b576;                             /* Cor da fonte */
+}
+
+#questions-qty {
+    font-weight: bold;
+    color: #075ea4;
+}
+
+#restart {
+    background-color: #e78230;
+    color: #fff;
+    font-weight: bold;
+    height: 50px;
+    border-radius: 25px;                            /* Arredondando os cantos, utilizando metade da altura */
+    border: 2px solid transparent;
+    width: 180px;
+    text-transform: uppercase;                      /* Deichando em caixa alta */
+    margin-top: 20px;                               /* Descolando do topo */
+    cursor: pointer;                                /* Coloca o cursor mãozinha */
+    transition: .25s;                                /* Tempo de transição */
+}
+
+#restart:hover {                                    /* Hover é quando o monteiro do mouse passa por cima do Elemento */
+    background-color: transparent;
+    border-color: #e78230;
+    color: #e78230;
+}
+
+/* Quizz container */
+
+#quiz-container {
+    width: 500px;
+    margin: 50px auto;
+    border: 1px solid #cddde8;
+    padding: 25px;
+    border-radius: 25px;
+}
+
+#question {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+#question-number {                      /* Estilizando apenas o numero da pergunta */
+    font-weight: bold;
+}
+
+#answers-box button {
+    display: flex;                      /* Assim colocado um abaixo do outro */
+    align-items: center;
+    width: 98%;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #cddde8;
+    border: 2px solid transparent;
+    text-align: left;
+    padding-left: 5px;
+    color: #000;
+    cursor: pointer;
+    transition: .25s;
+    margin-top: 15px;
+}
+
+#answers-box button:hover {             /* Colocando Hover, serão as alterações para quando passamos o mouse por cima */
+    background-color: #e78230;
+    color: #fff;
+}
+
+#answers-box .btn-letter {
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #e78230;
+    color: #fff;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    flex: 1 1 0;                        /* Ele cresce e diminui de forma igual com outros elementos flex */
+    max-width: 40px;                    /* Limito a largura maxima deste elemento para não ocupar a tela toda */
+}
+
+.question-answer {
+    flex: 1 1 0;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+#quiz-container .wrong-answer,
+#quiz-container .wrong-answer .btn-letter {
+    background-color: #e62210;
+    color: #fff;
+}
+
+#quiz-container .correct-answer,
+#quiz-container .correct-answer .btn-letter {
+    background-color: #40b576;
+    color: #fff;    
+}
+
+/* Responsivo */
+@media(max-width: 450px) {
+    
+    #quiz-container {
+        border:none;
+        width: 100%;
+    }
+
+    #answers-box button {
+        width: 90%;   
+    }
+}
